@@ -90,8 +90,7 @@ return [
     'exclude' => [
         'enabled' => true,
         'pages' => [
-            'Dashboard',
-            'Profile'
+            'Dashboard'
         ],
         'widgets' => [
             'AccountWidget',
