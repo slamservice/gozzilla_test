@@ -17,7 +17,7 @@ class Profile extends Page implements HasForms
 
     protected static ?string $navigationIcon = 'heroicon-o-user';
 
-    protected static ?int $navigationSort = -1;
+    protected static ?int $navigationSort = 10;
 
     public $name;
     public $email;

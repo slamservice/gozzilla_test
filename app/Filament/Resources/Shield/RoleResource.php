@@ -20,10 +20,10 @@ class RoleResource extends Resource
 {
     protected static ?string $model = Role::class;
 
-    protected static ?int $navigationSort = -1;
+    protected static ?int $navigationSort = 11;
 
     protected static ?string $slug = 'shield/roles';
-    
+
     protected static ?string $recordTitleAttribute = 'name';
 
     public static function form(Form $form): Form
