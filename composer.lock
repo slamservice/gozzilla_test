@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "726e3b921fef9b576da7f8c5238195ec",
+    "content-hash": "c6b2fad00a096aeff60e3d9f827fac90",
     "packages": [
         {
             "name": "akaunting/laravel-money",
@@ -1605,6 +1605,51 @@
                 }
             ],
             "time": "2022-06-20T21:43:11+00:00"
+        },
+        {
+            "name": "heloufir/filament-workflow-manager",
+            "version": "1.1.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heloufir/filament-workflow-manager.git",
+                "reference": "3b0d7c8ede7e9ea934d8088eca896a0ea9882fd5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heloufir/filament-workflow-manager/zipball/3b0d7c8ede7e9ea934d8088eca896a0ea9882fd5",
+                "reference": "3b0d7c8ede7e9ea934d8088eca896a0ea9882fd5",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^2.13"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Heloufir\\FilamentWorkflowManager\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "EL OUFIR Hatim",
+                    "email": "eloufirhatim@gmail.com"
+                }
+            ],
+            "description": "Manage your own workflows with filament",
+            "homepage": "https://github.com/heloufir/filament-workflow-manager",
+            "keywords": [
+                "filament",
+                "workflow"
+            ],
+            "support": {
+                "issues": "https://github.com/heloufir/filament-workflow-manager/issues",
+                "source": "https://github.com/heloufir/filament-workflow-manager/tree/1.1.8"
+            },
+            "time": "2022-07-07T15:21:38+00:00"
         },
         {
             "name": "intervention/image",
