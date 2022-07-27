@@ -2,6 +2,9 @@
 
 return [
     'navigation' => [
+        'Magazzino',
+        'Anagrafiche',
+        'Attrezzature',
         'Account',
         'Sistema',
         'Configurazioni',
