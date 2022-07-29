@@ -11,11 +11,12 @@ use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Heloufir\FilamentWorkflowManager\Core\WorkflowPermissions;
 
 class User extends Authenticatable implements FilamentUser, HasAvatar
 {
     use HasRoles;
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, WorkflowPermissions;
 
     /**
      * The attributes that are mass assignable.

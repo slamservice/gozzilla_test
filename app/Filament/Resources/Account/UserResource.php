@@ -2,18 +2,19 @@
 
 namespace App\Filament\Resources\Account;
 
-use App\Filament\Resources\Account\UserResource\Pages;
-use Spatie\Permission\Models\Role;
-use App\Filament\Resources\Account\UserResource\RelationManagers;
-use App\Models\User;
 use Filament\Forms;
-use Filament\Resources\Form;
-use Filament\Resources\Resource;
-use Filament\Resources\Table;
+use App\Models\User;
 use Filament\Tables;
-use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
+use Filament\Resources\Form;
+use Filament\Resources\Table;
+use Filament\Resources\Resource;
+use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Hash;
 use STS\FilamentImpersonate\Impersonate;
+use App\Filament\Resources\Account\UserResource\Pages;
+use App\Filament\Resources\Account\UserResource\RelationManagers;
+use Heloufir\FilamentWorkflowManager\Resources\UserResource\WorkflowPermissions;
 
 class UserResource extends Resource
 {
@@ -25,6 +26,7 @@ class UserResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-users';
 
     protected static ?int $navigationSort = 11;
+
 
     public static function form(Form $form): Form
     {
@@ -115,7 +117,7 @@ class UserResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //
+            WorkflowPermissions::class,
         ];
     }
 

@@ -30,6 +30,8 @@ use App\Filament\Resources\PfcResource\Pages;
 use Filament\Forms\Components\BelongsToSelect;
 use Filament\Forms\Components\HasManyRepeater;
 use Mohamedsabil83\FilamentFormsTinyeditor\Components\TinyEditor;
+use Heloufir\FilamentWorkflowManager\Tables\Columns\WorkflowStatusColumn;
+use Heloufir\FilamentWorkflowManager\Forms\Components\WorkflowStatusInput;
 
 
 class PfcResource extends Resource
@@ -72,6 +74,8 @@ class PfcResource extends Resource
     {
         return $form
             ->schema([
+                WorkflowStatusInput::make()
+                    ->label('Stato'),
                 //******START CREATION */
                 Card::make()
                     ->schema([
@@ -133,6 +137,13 @@ class PfcResource extends Resource
                 //******START HEAD */
                 Card::make()
                     ->schema([
+                        Placeholder::make('auto')
+                        ->content(
+                            function ($state, \Closure $get, callable $set, $livewire) {
+                                static::CalcoliQta('', $get, $set, $livewire);
+                            }
+                        )
+                        ->columnSpan(1),
                         Placeholder::make('codice')
                             ->label('Numero PFC')
                             ->content(fn ($record) => $record->codice)
@@ -324,6 +335,8 @@ class PfcResource extends Resource
                 TextColumn::make('pfcmadre.codice')
                     ->label('Codice')
                     ->limit(50),
+                WorkflowStatusColumn::make()
+                    ->label('Stato'),
             ])
             ->actions([
                 ViewAction::make('preview')
@@ -337,6 +350,7 @@ class PfcResource extends Resource
                     })
                     ->form(static::PfcPreview(),),
                 EditAction::make('edit'),
+                workflow_resources_history(),
             ])
             ->filters([
                 //
