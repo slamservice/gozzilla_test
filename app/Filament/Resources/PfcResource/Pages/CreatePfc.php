@@ -4,19 +4,23 @@ namespace App\Filament\Resources\PfcResource\Pages;
 
 use App\Models\Pfcmadre;
 use App\Models\Contatore;
+use App\Models\PfcMaster;
+use App\Models\PfcPressa;
 use App\Models\PfcImballo;
 use App\Models\PfcInserto;
 use App\Models\PfcArticolo;
-use App\Filament\Resources\PfcResource;
-use App\Models\PfcMaster;
-use App\Models\PfcPressa;
 use App\Models\PfcStampato;
+use App\Filament\Resources\PfcResource;
 use Illuminate\Database\Eloquent\Model;
 use Filament\Resources\Pages\CreateRecord;
+use Heloufir\FilamentWorkflowManager\Core\WorkflowResource;
 
 class CreatePfc extends CreateRecord
 {
+    use WorkflowResource;
+
     protected static string $resource = PfcResource::class;
+
 
     protected function handleRecordCreation(array $data): Model
     {

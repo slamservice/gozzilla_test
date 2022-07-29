@@ -185,7 +185,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        \Heloufir\FilamentWorkflowManager\FilamentWorkflowManagerServiceProvider::class,
         /*
          * Application Service Providers...
          */

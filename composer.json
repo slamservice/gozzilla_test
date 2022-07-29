@@ -10,6 +10,7 @@
         "filament/filament": "^2.12",
         "filament/spatie-laravel-media-library-plugin": "^2.15",
         "guzzlehttp/guzzle": "^7.2",
+        "heloufir/filament-workflow-manager": "^1.1",
         "laravel/framework": "^9.11",
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",

@@ -5,11 +5,28 @@ namespace App\Filament\Resources\PfcResource\Pages;
 use Filament\Pages\Actions\Action;
 use App\Filament\Resources\PfcResource;
 use Filament\Resources\Pages\EditRecord;
+use Heloufir\FilamentWorkflowManager\Core\WorkflowResource;
 
 class EditPfc extends EditRecord
 {
 
     protected static string $resource = PfcResource::class;
+
+    use WorkflowResource;
+
+    // protected $listeners = ['WorkflowStatusUpdated' => 'status_updated'];
+
+
+    // public function status_updated($obj)
+    // {
+    //     dd($obj); // $obj is the details object defined before
+    // }
+
+    protected function getRedirectUrl(): string
+    {
+        return static::getResource()::getUrl('index');
+    }
+
 //     protected function getActions(): array
 // {
 //     return [
